@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Zombie",
+        "type": "Undead",
+        "health": 20,    
+        "attack": 4,
+        "drops": ["rottenFlesh.png", "ironIngot.png"],
+        "spawn_biomes": ["plains", "forest"],
+        "description": "Hostile undead mob that burns in sunlight.",
+        "image": "zombie.gif"
+    },
+    {
+        "name": "Creeper",
+        "type": "Monster",
+        "health": 20,
+        "attack": "Explosive",
+        "drops": ["gunpowder.png"],
+        "spawn_biomes": ["forest", "swamp"],
+        "description": "Aggressive mob that explodes when close to players.",
+        "image": "creeper.gif"
+    },
+    {
+        "name": "Skeleton",
+        "type": "Undead",
+        "health": 20,
+        "attack": 6,
+        "drops": ["arrow.png", "bone.png"],
+        "spawn_biomes": ["desert", "taiga"],
+        "description": "Ranged mob that shoots arrows at players.",
+        "image": "skeleton.gif"
+    },
+    {
+        "name": "Spider",
+        "type": "Monster",
+        "health": 16,
+        "attack": 2,
+        "drops": ["string.png", "spiderEye.png"],
+        "spawn_biomes": ["forest", "swamp"],
+        "description": "Neutral mob that becomes hostile at night.",
+        "image": "./spider.gif"
+    },
+    {
+        "name": "Enderman",
+        "type": "Ender",
+        "health": 40,
+        "attack": 7,
+        "drops": ["enderPearl.jfif"],
+        "spawn_biomes": ["end"],
+        "description": "Teleporting mob found in the End dimension.",
+        "image": "enderman.gif"
+    },
+    {
+        "name": "Pig",
+        "type": "Passive",
+        "health": 10,
+        "attack": "None",
+        "drops": ["arrow.png"],
+        "spawn_biomes": ["plains", "forest"],
+        "description": "Passive mob that can be farmed for porkchops.",
+        "image": "pig.gif"
+    },
+    {
+        "name": "Cow",
+        "type": "Passive",
+        "health": 10,
+        "attack": "None",
+        "drops": ["beef.jfif", "leather.png"],
+        "spawn_biomes": ["plains"],
+        "description": "Passive mob that provides beef and leather.",
+        "image": "cow.gif"
+    },
+    {
+        "name": "Sheep",
+        "type": "Passive",
+        "health": 8,
+        "attack": "None",
+        "drops": ["mutton.png", "wool.jfif"],
+        "spawn_biomes": ["plains"],
+        "description": "Passive mob that can be sheared for wool.",
+        "image": "sheep.gif"
+    },
+    {
+        "name": "Chicken",
+        "type": "Passive",
+        "health": 4,
+        "attack": "None",
+        "drops": ["chicken.png", "feather.png"],
+        "spawn_biomes": ["plains"],
+        "description": "Passive mob that provides chicken and feathers.",
+        "image": "chicken.gif"
+    },
+    {
+        "name": "Cowselot",
+        "type": "Passive",
+        "health": 16,
+        "attack": "None",
+        "drops": ["beef.jfif", "leather.png"],
+        "spawn_biomes": ["plains"],
+        "description": "Rare passive mob resembling a mooshroom and pig hybrid.",
+        "image": "clayton.jpg"
+    },
+    {
+        "name": "Endermite",
+        "type": "Ender",
+        "health": 8,
+        "attack": 2,
+        "drops": ["enderPearl.jfif"],
+        "spawn_biomes": ["end"],
+        "description": "Small hostile mob found in the End dimension.",
+        "image": "endermite.gif"
+    },
+    {
+        "name": "Wolf",
+        "type": "Animal",
+        "health": 8,
+        "attack": 2,
+        "drops": ["bone.png"],
+        "spawn_biomes": ["taiga", "forest"],
+        "description": "Friendly animal mob that can be tamed and used as a companion.",
+        "image": "wolf.gif"
+    },      
+    {
+        "name": "Guardian",
+        "type": "Aquatic",
+        "health": 30,
+        "attack": 6,
+        "drops": ["priShard.jfif", "prisCrystal.png"],
+        "spawn_biomes": ["ocean", "deep_ocean"],
+        "description": "Hostile aquatic mob found in ocean monuments.",
+        "image": "guardian.gif"
+    },
+    {
+        "name": "Villager",
+        "type": "Passive",
+        "health": 20,
+        "attack": "None",
+        "drops": ["emerald.jfif"],
+        "spawn_biomes": ["plains", "village"],
+        "description": "Passive mob that can trade with players.",
+        "image": "villager.gif"
+    },
+    {
+        "name": "Witch",
+        "type": "Monster",
+        "health": 26,
+        "attack": 6,
+        "drops": ["potion.png", "glassBottle.png"],
+        "spawn_biomes": ["swamp", "hut"],
+        "description": "Hostile mob that uses potions in combat.",
+        "image": "witch.gif"
+    }
+]

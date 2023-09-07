@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+    *{
+        font-family: 'Roboto', sans-serif;
+    }
+   
+
+    .Search{
+        display: grid;
+        grid-template-columns: 450px 120px;
+        grid-template-rows: repeat(3,30px);
+
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    body {
+        background-image: url("../images/background.png");
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .Search input{
+        width: calc(100% - 19px);
+        height: 100%;
+        border: black 2px solid;
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    #Name{
+        border-radius: 12px 0px 0px 12px;
+    }
+    #Heath{
+        border-radius: 0px 12px 12px 0px;
+        height: 48px;
+        border: black 2px solid;
+        padding: 8px !important;
+    }
+
+    #logo {
+        max-width: 50%;
+        justify-self: center;
+        padding-top: 27px;
+        margin-bottom: -30px
+    }
+
+    /* Card Design */
+
+
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+        padding-block: 25px;
+        width: 100%;
+       /* Set the height to the full viewport height */
+    }
+
+    .InsideClass{
+        width: calc(345px * 3);
+        max-width: 95%;
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    .inner {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 370px;
+        /* Set a specific height for the inner div */
+        width: 270px;
+        background-color: rgb(121, 71, 50);
+        border-radius: 10px;
+
+        /* Set a specific width for the inner div */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        transition: transform 0.5s ease-in-out; /* Add a transition for smooth animation */
+        cursor: pointer; /* Change cursor to indicate clickability */
+        transform-style: preserve-3d; /* Enable 3D transformations */
+        position: relative;
+    }
+    .Pic img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .inner.active {
+        transform: rotateY(180deg); /* Apply rotation when active class is present */
+    }
+
+    .Heart{
+        width: 50px;
+        height: 50px;
+        z-index: 2;
+        bottom: 20px;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        
+        left: 20px;
+    }
+    .Heart i{
+        position: absolute;
+        z-index: 2;
+        font-size: 50px;
+    }
+    .Heart p{
+        z-index: 3;
+        margin: 0px;
+        padding: 0px;
+    }
+    .Pic {
+        align-self: center;
+        justify-self: center;
+        height: 350px;
+        width: 250px;
+        pointer-events: none;
+
+        transform: rotateY(0deg); /* Initial rotation angle */
+        backface-visibility: hidden; /* Hide the backface of the div */
+        position: absolute; /* Ensure proper positioning of content on the back */
+        object-fit: cover; /* Ensure image fills the circular container */
+
+    }
+
+    .Pic > img {
+        border-radius: 10px;
+    }
+
+    .mobImg {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    ul {
+        list-style: none;
+        text-align: left;
+    }
+
+    ul li {
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .BackContent h1 , .BackContent p, .BackContent ul div li {
+       width: calc(100% - 40px);
+       display:flex;
+       align-items: left;
+       text-align: left;
+       padding: 0px;
+       padding-inline: 20px;
+       margin:0;
+    }
+    .BackContent ul div{
+        width: 100%;
+    }
+    .BackContent ul,.BackContent ul li{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .BackContent ul{
+        margin-top: 15px !important;
+    }
+    .BackContent h1{
+        margin-top: 20px !important;
+    }
+
+    .img {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        border-radius: 5px;
+    }
+
+
+
+    .BackContent {
+        display: flex; 
+        pointer-events: none;
+        align-items: center;
+        flex-direction: column;
+        transform: rotateY(180deg); /* Rotate the content to show on the back */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        color: black;
+        text-align: center;
+    }
+
+    .inner.active.BackContent {
+        display: flex; /* Show the back content when .inner has the .active class */
+    }
+    h2{
+       padding: 10px;
+    }
+
+
+    @media screen and (max-width:620px){
+        .Search{
+            display: grid;
+            grid-template-columns: 90% 85px;
+            grid-template-rows: repeat(3,30px);
+    
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+    }
+
+
+
+    .drops{
+     animation: MoveUpDown 2s infinite var(--Delay);
+    }
+
+    @keyframes MoveUpDown {
+        0%{transform: translateY(0px);}
+        50%{transform: translateY(3px);}
+        100%{transform: translateY(0px);}
+    }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobs</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="https://kit.fontawesome.com/cd385a218c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <img id="logo" src="../images/logo.png" alt="">
+    
+  <form class="Search" id='form' action="./Mobs">
+    
+    <input type="text" id="Name" placeholder="Name" list="mobList" name="Name"/>
+    <datalist id="mobList">
+      <% for (let mob of Mobs) { %>
+        <option value="<%= mob.name %>">
+      <% } %>
+    </datalist>
+
+    <input type="submit" id="Heath" value="Search" />
+
+  </form>
+ 
+  <div class="main" id="mobContainer">
+
+    <div class="InsideClass">
+      <% Mobs.forEach(mob => { %>
+      <div class="inner" onclick="flip(event)">
+        
+        <div class="Pic">
+          <img src="../images/<%= mob.image %>" alt="Minecraft mob <%= mob.name %>"style="pointer-events: none;">
+          <div class="Heart">
+            <p><%= mob.health %></p>         
+            <i class="fa-solid fa-heart" style="color: #ff0b0b;"></i>
+          </div>
+        </div>
+        <div class="BackContent">
+          <h1><%= mob.name %></h1>
+          <p><%= mob.description %></p>
+
+          <ul id="MobList">
+            <div>
+                <li>Type: <%= mob.type %></li>
+                <li>Attack: <%= mob.attack %></li>
+                <li>Drops: 
+                  <% mob.drops.forEach((drop,index) => { %>
+                     <img class="img drops" style="--Delay: <%=index * 0.1 %>s" src="../images/<%= drop %>" alt="<%= drop[0] %>">
+                    <% }) %></li>
+                <li>Spawn Biomes: <%= mob.spawn_biomes.join(', ') %></li>
+            
+          </ul>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+    
+  </div>
+
+    <div>
+     
+    </div>
+</body>
+
+<script>
+  function flip(e) {
+    e.target.classList.toggle('active')
+  }
+</script>
+  
+
+</html>

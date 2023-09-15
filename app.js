@@ -4,9 +4,9 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/public/css'));
-app.use(express.static(__dirname + '/public/images'));
+app.use(express.static(__dirname + '/Public'));
+app.use(express.static(__dirname + '/Public/css'));
+app.use(express.static(__dirname + '/Public/images'));
 
 const Mobs = require('./Mobs.json');
 
